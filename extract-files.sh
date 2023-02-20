@@ -7,6 +7,10 @@
 
 function blob_fixup() {
     case "${1}" in
+    vendor/etc/camera/pureShot_parameter.xml \
+    |vendor/etc/camera/pureView_parameter.xml)
+        sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
+        ;;
     # Patch configureRpcThreadpool
     vendor/lib64/hw/camera.xiaomi.so)
 	"${SIGSCAN}" -p "AA 06 00 94" -P "1F 20 03 D5" -f "${2}"
