@@ -8,8 +8,14 @@
 function blob_fixup() {
     case "${1}" in
     # Patch configureRpcThreadpool
+    vendor/lib64/hw/camera.xiaomi.so)
+	"${SIGSCAN}" -p "AA 06 00 94" -P "1F 20 03 D5" -f "${2}"
+        ;;
     vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
         "${SIGSCAN}" -p "8D 0A 00 94" -P "1F 20 03 D5" -f "${2}"
+        ;;
+     vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
+        "${SIGSCAN}" -p "7C 00 00 94" -P "1F 20 03 D5" -f "${2}"
         ;;
     esac
 }
