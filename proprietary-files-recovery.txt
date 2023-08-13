@@ -1,5 +1,0 @@
-# All unpinned blobs below are extracted from veux_global-user 12 SKQ1.211006.001 V13.0.2.0.SKCMIXM release-keys
-
-# Touchscreen firmware
-vendor/firmware/st_fts_k2.ftb:vendor_ramdisk/lib/firmware/st_fts_k2.ftb
-vendor/firmware/st_fts_k2_htp.ftb:vendor_ramdisk/lib/firmware/st_fts_k2_htp.ftb
